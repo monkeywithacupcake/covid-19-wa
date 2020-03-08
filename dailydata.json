@@ -72,8 +72,10 @@
     "clark":{
     "positive": 1
     },
-    ,
     "jefferson":{
+    "positive": 1
+    },
+    "pierce":{
     "positive": 1
     }
   },
@@ -83,6 +85,9 @@
     },
     "snohomish":{
     "positive": 8
+    },
+    "pierce":{
+    "positive": 2
     }
   },
   "2020-03-08":{
