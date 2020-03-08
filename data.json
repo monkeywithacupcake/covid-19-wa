@@ -1,4 +1,9 @@
-{
+{"kitsap": {
+  "name": "Kitsap",
+  "date": ["2020-03-08"],
+  "positive": [0],
+  "deaths": [0]
+},
   "clark" : {
   "name": "Clark",
   "date": ["2020-03-06"],
