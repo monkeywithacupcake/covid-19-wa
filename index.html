@@ -1,0 +1,37 @@
+<head>
+  <!-- Load plotly.js into the DOM -->
+  <script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
+</head>
+
+<body>
+  <header>
+    <h1>Washington State Covid 19</h1>
+  </header>
+  <div id='walineplotdiv'></div>
+  <div id='bycounty'>
+    <h2>Data by County</h2>
+    <div id="pos">
+      <h3>Positive/Confirmed Cases</h3>
+      <ul id="poslist"></ul>
+      <div id='posbycounty'></div>
+    </div>
+    <div id="death">
+      <h3>Deaths</h3>
+      <ul id="deathlist"></ul>
+      <div id='deathbycounty'></div>
+    </div>
+  </div>
+  <footer>
+    Data updated regularly from counties and the <a href="https://www.doh.wa.gov/emergencies/coronavirus">WA Dept of
+      Health</a>. Counts may not exactly match those on the WA DOH page, given timing of county updates. Best effort is
+    used to count new cases and deaths that the county is reporting that day (most counties update around 1100).
+    <ul>
+      <li><a href="https://www.clark.wa.gov/public-health">Clark</a></li>
+      <li><a href="http://granthealth.org/updates-for-covid-19-in-grant-county/">Grant</a></li>
+      <li><a href="https://jeffersoncountypublichealth.org/1429/COVID-19">Jefferson</a></li>
+      <li><a href="https://www.kingcounty.gov/depts/health/news.aspx">King</a></li>
+      <li><a href="https://www.snohd.org/484/Novel-Coronavirus-2019">Snohomish</a> - Snohomish positive are "confirmed"
+        and do not include the "probable" cases. Snohomish reported the first US case.
+    </ul>
+  </footer>
+</body>
