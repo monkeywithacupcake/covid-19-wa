@@ -24,15 +24,15 @@ Last update 2020-03-08
  - Jefferson
  - King
  - Kitsap
- - Kittitas
- - Klickitat
- - Lewis
+ - Kittitas https://www.co.kittitas.wa.us/press/default.aspx
+ - Klickitat http://klickitatcounty.org/
+ - Lewis https://lewiscountywa.gov/departments/public-health/blog/
  - Lincoln
  - Mason
  - Okanogan
  - Pacific
  - Pend Oreille
- - Pierce
+ - Pierce https://www.tpchd.org/healthy-people/human-coronavirus
  - San Juan
  - Skagit
  - Skamania
