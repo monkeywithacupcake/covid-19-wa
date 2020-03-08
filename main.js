@@ -1,4 +1,18 @@
 // setup raw data
+var ghurl =
+  "https://raw.githubusercontent.com/monkeywithacupcake/covid-19-wa/master/dailydata.json";
+fetch(ghurl)
+  .then(res => res.json())
+  .then(out => {
+    console.log("Checkout this JSON! ", out);
+    // need to create a list of counties
+    // will need to create an object for each county
+    // create a date array, positive array, and dead array
+  })
+  .catch(err => {
+    throw err;
+  });
+
 var clark = {
   name: "Clark",
   date: ["2020-03-06"],
@@ -29,8 +43,14 @@ var snohomish = {
     "2020-03-05",
     "2020-03-07"
   ],
-  positive: [1, 1, 1, 0, 2, 4, 9, 13],
-  deaths: [0, 0, 0, 1, 0, 0, 0, 0]
+  positive: [1, 1, 1, 1, 2, 4, 9, 8],
+  deaths: [0, 0, 0, 1, 0, 0, 0, 0, 0]
+};
+var pierce = {
+  name: "Pierce",
+  date: ["2020-03-06", "2020-03-07"],
+  positive: [1, 2],
+  deaths: [0, 0]
 };
 
 var king = {
@@ -49,7 +69,7 @@ var king = {
   deaths: [1, 1, 3, 3, 2, 1, 0]
 };
 
-var counties = [grant, snohomish, jefferson, king, clark];
+var counties = [grant, snohomish, jefferson, king, clark, pierce];
 function mySum(total, num) {
   return total + num;
 }
