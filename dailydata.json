@@ -88,6 +88,9 @@
     },
     "pierce":{
     "positive": 2
+    },
+    "kittitas": {
+      "positive": 1
     }
   },
   "2020-03-08":{
