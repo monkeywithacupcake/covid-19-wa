@@ -91,7 +91,11 @@
     }
   },
   "2020-03-08":{
-  "snohomish":{
+  "king":{
+    "positive": 12,
+    "dead" 2
+    },
+    "snohomish":{
     "positive": 12
     }
   }
