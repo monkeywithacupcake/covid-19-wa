@@ -25,9 +25,9 @@ var grant = {
   name: "Grant",
   lat: 47.1981,
   lon: -119.3732,
-  date: ["2020-03-05"],
+  date: ["2020-03-05","2020-03-08"],
   positive: [1],
-  deaths: [0]
+  deaths: [0,1]
 };
 var jefferson = {
   name: "Jefferson",
@@ -60,7 +60,7 @@ var pierce = {
   lat: 47.067,
   lon: -122.1295,
   date: ["2020-03-06", "2020-03-07", "2020-03-08"],
-  positive: [1, 2, 1],
+  positive: [1, 2, 4],
   deaths: [0, 0, 0]
 };
 
@@ -77,13 +77,34 @@ var king = {
     "2020-03-05",
     "2020-03-06",
     "2020-03-07",
-    "2020-03-08"
+    "2020-03-08",
+    "2020-03-09"
   ],
-  positive: [3, 7, 4, 7, 10, 20, 7, 13, 12],
-  deaths: [1, 1, 3, 3, 2, 1, 0, 2, 2]
+  positive: [3, 7, 4, 7, 10, 20, 7, 13, 12,33],
+  deaths: [1, 1, 3, 3, 2, 1, 0, 2, 2,3]
+};
+var kitsap = {
+  name: "Kitsap",
+  lat: 47.6477,
+  lon: -122.6413,
+  date: [
+    "2020-03-09"
+  ],
+  positive: [1],
+  deaths: [0]
+};
+var kittitas = {
+  name: "Kittitas",
+  lat: 46.9832,
+  lon: -120.4170,
+  date: [
+    "2020-03-09"
+  ],
+  positive: [1],
+  deaths: [0]
 };
 
-var counties = [grant, snohomish, jefferson, king, clark, pierce];
+var counties = [clark, grant, jefferson, king, kitsap, kittitas, pierce, snohomish];
 function mySum(total, num) {
   return total + num;
 }
@@ -205,13 +226,21 @@ color = [, "rgb(255,65,54)", "rgb(133,20,75)", "rgb(255,133,27)", "lightgrey"];
 for (var i = 0; i < counties.length; i++) {
   var pos = counties[i].positive.reduce(mySum);
   var dea = counties[i].deaths.reduce(mySum);
-  var currentText = counties[i].name + " Pos: " + pos + " Dead: " + dea+ " CFR: " + dea/pos;
+  var currentText =
+    counties[i].name +
+    " Pos: " +
+    pos +
+    " Dead: " +
+    dea +
+    " CFR: " +
+    (dea / pos).toFixed(2) * 100 +
+    "%";
   ctyName.push(counties[i].name);
   ctyLon.push(counties[i].lon);
   ctyLat.push(counties[i].lat);
   ctyPos.push(pos);
   ctyDea.push(dea);
-  ctyCfr.push(dea/pos);
+  ctyCfr.push(Math.max((dea / pos) * 100, pos));
   hoverText.push(currentText);
 }
 var mdata = [
@@ -223,7 +252,7 @@ var mdata = [
     hoverinfo: "text",
     text: hoverText,
     marker: {
-      size: ctyCfr,
+      size: Math.log(ctyCfr),
       line: {
         color: "black",
         width: 2
@@ -256,3 +285,11 @@ Plotly.newPlot(
   { showLink: false },
   { displayModeBar: true }
 );
+
+// add totals to title
+var totPos = ctyPos.reduce(mySum);
+var totDea = ctyDea.reduce(mySum);
+document.getElementById("wacounts").innerHTML =
+  totPos + " Cases & " + totDea + " Deaths";
+document.getElementById("wacfr").innerHTML =
+  "Case Fatality Rate: " + ((totDea / totPos) * 100).toFixed(1) + "%";
