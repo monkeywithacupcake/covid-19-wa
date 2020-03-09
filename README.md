@@ -1,9 +1,13 @@
-# covid-19-wa
+# WA Covid 19
+
 Tracking public data for COVID-19 in Washington state
+**Last update 2020-03-08**
 
 The current page can be seen on [codepen](https://codepen.io/jessachandler/pen/zYGEbRK)
 
-Last update 2020-03-08
+![Current Time Plot](https://raw.githubusercontent.com/monkeywithacupcake/covid-19-wa/master/covidgraph.png)
+![Current Map](https://raw.githubusercontent.com/monkeywithacupcake/covid-19-wa/master/covidmap.png)
+
 
 ## County update sites
 
