@@ -198,18 +198,20 @@ var ctyLon = [];
 var ctyLat = [];
 var ctyPos = [];
 var ctyDea = [];
+var ctyCfr = []; // case fatality rate is dead/positive
 var hoverText = [];
 color = [, "rgb(255,65,54)", "rgb(133,20,75)", "rgb(255,133,27)", "lightgrey"];
 
 for (var i = 0; i < counties.length; i++) {
   var pos = counties[i].positive.reduce(mySum);
   var dea = counties[i].deaths.reduce(mySum);
-  var currentText = counties[i].name + " Pos: " + pos + " Dead: " + dea;
+  var currentText = counties[i].name + " Pos: " + pos + " Dead: " + dea+ " CFR: " + dea/pos;
   ctyName.push(counties[i].name);
   ctyLon.push(counties[i].lon);
   ctyLat.push(counties[i].lat);
   ctyPos.push(pos);
   ctyDea.push(dea);
+  ctyCfr.push(dea/pos);
   hoverText.push(currentText);
 }
 var mdata = [
@@ -221,7 +223,7 @@ var mdata = [
     hoverinfo: "text",
     text: hoverText,
     marker: {
-      size: ctyPos,
+      size: ctyCfr,
       line: {
         color: "black",
         width: 2
@@ -231,7 +233,7 @@ var mdata = [
 ];
 
 var mlayout = {
-  title: "MAP - Current WA COVID-19 (scale by # positive)",
+  title: "MAP - Current WA COVID-19 (scale by case fatality rate)",
   showlegend: false,
   geo: {
     scope: "usa",
