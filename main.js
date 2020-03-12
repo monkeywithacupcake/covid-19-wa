@@ -41,9 +41,9 @@ var island = {
   name: "Island",
   lat: 48.1976,
   lon: -122.5795,
-  date: ["2020-03-10"],
-  positive: [1],
-  deaths: [0]
+  date: ["2020-03-10","2020-03-12"],
+  positive: [1,2],
+  deaths: [0,0]
 };
 var jefferson = {
   name: "Jefferson",
@@ -69,10 +69,10 @@ var king = {
     "2020-03-08",
     "2020-03-09",
     "2020-03-10",
-    "2020-03-11"
+    "2020-03-11","2020-03-12"
   ],
-  positive: [3, 7, 4, 7, 10, 20, 7, 13, 12,33,74,44],
-  deaths: [1, 1, 3, 3, 2, 1, 1, 2, 2,3,2,4]
+  positive: [3, 7, 4, 7, 10, 20, 7, 13, 12,33,74,44,36],
+  deaths: [1, 1, 3, 3, 2, 1, 1, 2, 2,3,2,4,1]
 };
 var kitsap = {
   name: "Kitsap",
@@ -107,9 +107,9 @@ var skagit = {
   name: "Skagit",
   lat: 48.4242,
   lon: -121.7114,
-  date: ["2020-03-11"],
-  positive: [1],
-  deaths: [0]
+  date: ["2020-03-10","2020-03-12"],
+  positive: [1,1],
+  deaths: [0,0]
 };
 var snohomish = {
   name: "Snohomish",
@@ -125,10 +125,10 @@ var snohomish = {
     "2020-03-05",
     "2020-03-07",
     "2020-03-08",
-    "2020-03-09","2020-03-10","2020-03-11"
+    "2020-03-09","2020-03-10","2020-03-11","2020-03-12"
   ],
-  positive: [1, 1, 1, 1, 2, 4, 9, 8, 4,10,15,19],
-  deaths: [0, 0, 0, 1, 0, 0, 0, 0, 0, 0,2,0,0]
+  positive: [1, 1, 1, 1, 2, 4, 9, 8, 4,10,15,19,33],
+  deaths: [0, 0, 0, 1, 0, 0, 0, 0, 0, 0,2,0,0,0]
 };
 
 var thurston = {
@@ -147,8 +147,16 @@ var whatcom = {
   positive: [1],
   deaths: [0]
 };
+var yakima = {
+  name: "Yakima",
+  lat: 46.5436,
+  lon: -120.7558,
+  date: ["2020-03-11"],
+  positive: [2],
+  deaths: [0]
+};
 
-var counties = [clark, grant, graysharbor, island, jefferson, king, kitsap, kittitas, pierce, skagit, snohomish, thurston,whatcom];
+var counties = [clark, grant, graysharbor, island, jefferson, king, kitsap, kittitas, pierce, skagit, snohomish, thurston,whatcom,yakima];
 function mySum(total, num) {
   return total + num;
 }
