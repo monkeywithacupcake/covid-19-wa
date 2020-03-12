@@ -38,7 +38,7 @@ There are 35 public health offices for 39 Washington counties. Benton/Franklin, 
  - Pacific http://pacificcountyhealthdepartment.com/
  - Pend Oreille (with Ferry)
  - Pierce https://www.tpchd.org/healthy-people/human-coronavirus
- - San Juan https://www.sanjuanco.com/1668/2019-Novel-Coronavirus
+ - San Juan https://www.sanjuanco.com/1682/COVID-19-SJC-Case-Count
  - Skagit https://www.skagitcounty.net/Departments/HealthDiseases/coronavirus.htm
  - Skamania https://www.skamaniacounty.org/departments-offices/community-health
  - Snohomish https://www.snohd.org/484/Novel-Coronavirus-2019
