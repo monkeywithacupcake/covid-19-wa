@@ -8,7 +8,6 @@ The current page can be seen on [codepen](https://codepen.io/jessachandler/pen/z
 ![Current Time Plot](https://raw.githubusercontent.com/monkeywithacupcake/covid-19-wa/master/covidgraph.png)
 ![Current Map](https://raw.githubusercontent.com/monkeywithacupcake/covid-19-wa/master/covidmap.png)
 
-
 ## County update sites
 
 There are 35 public health offices for 39 Washington counties. Benton/Franklin, Chelan/Douglas, Ferry/Pend Oreille/Stevens are combined county public health. 
