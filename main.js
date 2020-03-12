@@ -26,14 +26,88 @@ var grant = {
   lat: 47.1981,
   lon: -119.3732,
   date: ["2020-03-05","2020-03-08"],
-  positive: [1],
+  positive: [1,0],
   deaths: [0,1]
+};
+var graysharbor = {
+  name: "Grays Harbor",
+  lat: 46.9954,
+  lon: -123.7012,
+  date: ["2020-03-11"],
+  positive: [1],
+  deaths: [0]
+};
+var island = {
+  name: "Island",
+  lat: 48.1976,
+  lon: -122.5795,
+  date: ["2020-03-10"],
+  positive: [1],
+  deaths: [0]
 };
 var jefferson = {
   name: "Jefferson",
   lat: 47.7425,
   lon: -123.304,
   date: ["2020-03-06"],
+  positive: [1],
+  deaths: [0]
+};
+var king = {
+  name: "King",
+  lat: 47.548,
+  lon: -121.9836,
+  date: [
+    "2020-02-29",
+    "2020-03-01",
+    "2020-03-02",
+    "2020-03-03",
+    "2020-03-04",
+    "2020-03-05",
+    "2020-03-06",
+    "2020-03-07",
+    "2020-03-08",
+    "2020-03-09",
+    "2020-03-10",
+    "2020-03-11"
+  ],
+  positive: [3, 7, 4, 7, 10, 20, 7, 13, 12,33,74,44],
+  deaths: [1, 1, 3, 3, 2, 1, 0, 2, 2,3,2,4]
+};
+var kitsap = {
+  name: "Kitsap",
+  lat: 47.6477,
+  lon: -122.6413,
+  date: [
+    "2020-03-09", "2020-03-10"
+  ],
+  positive: [1,1],
+  deaths: [0,0]
+};
+var kittitas = {
+  name: "Kittitas",
+  lat: 46.9832,
+  lon: -120.4170,
+  date: [
+    "2020-03-09",
+    "2020-03-11"
+  ],
+  positive: [1,2],
+  deaths: [0,0]
+};
+var pierce = {
+  name: "Pierce",
+  lat: 47.067,
+  lon: -122.1295,
+  date: ["2020-03-06", "2020-03-07", "2020-03-08","2020-03-09","2020-03-10"],
+  positive: [1, 2, 4,7,3],
+  deaths: [0, 0, 0,0,0]
+};
+var skagit = {
+  name: "Skagit",
+  lat: 48.4242,
+  lon: -121.7114,
+  date: ["2020-03-11"],
   positive: [1],
   deaths: [0]
 };
@@ -50,61 +124,31 @@ var snohomish = {
     "2020-03-04",
     "2020-03-05",
     "2020-03-07",
-    "2020-03-08"
-  ],
-  positive: [1, 1, 1, 1, 2, 4, 9, 8, 4],
-  deaths: [0, 0, 0, 1, 0, 0, 0, 0, 0, 0]
-};
-var pierce = {
-  name: "Pierce",
-  lat: 47.067,
-  lon: -122.1295,
-  date: ["2020-03-06", "2020-03-07", "2020-03-08"],
-  positive: [1, 2, 4],
-  deaths: [0, 0, 0]
-};
-
-var king = {
-  name: "King",
-  lat: 47.548,
-  lon: -121.9836,
-  date: [
-    "2020-02-29",
-    "2020-03-01",
-    "2020-03-02",
-    "2020-03-03",
-    "2020-03-04",
-    "2020-03-05",
-    "2020-03-06",
-    "2020-03-07",
     "2020-03-08",
-    "2020-03-09"
+    "2020-03-09","2020-03-10","2020-03-11"
   ],
-  positive: [3, 7, 4, 7, 10, 20, 7, 13, 12,33],
-  deaths: [1, 1, 3, 3, 2, 1, 0, 2, 2,3]
+  positive: [1, 1, 1, 1, 2, 4, 9, 8, 4,10,15,19],
+  deaths: [0, 0, 0, 1, 0, 0, 0, 0, 0, 0,2,0,0]
 };
-var kitsap = {
-  name: "Kitsap",
-  lat: 47.6477,
-  lon: -122.6413,
-  date: [
-    "2020-03-09"
-  ],
+
+var thurston = {
+  name: "Thurston",
+  lat: 46.8646,
+  lon: -122.7696,
+  date: ["2020-03-11"],
   positive: [1],
   deaths: [0]
 };
-var kittitas = {
-  name: "Kittitas",
-  lat: 46.9832,
-  lon: -120.4170,
-  date: [
-    "2020-03-09"
-  ],
+var whatcom = {
+  name: "Whatcom",
+  lat: 48.8787,
+  lon: -121.9719,
+  date: ["2020-03-11"],
   positive: [1],
   deaths: [0]
 };
 
-var counties = [clark, grant, jefferson, king, kitsap, kittitas, pierce, snohomish];
+var counties = [clark, grant, graysharbor, island, jefferson, king, kitsap, kittitas, pierce, skagit, snohomish, thurston,whatcom];
 function mySum(total, num) {
   return total + num;
 }
