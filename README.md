@@ -1,7 +1,7 @@
 # WA Covid 19
 
 Tracking public data for COVID-19 in Washington state
-**Last update 2020-03-08**
+**Last update 2020-03-11**
 
 The current page can be seen on [codepen](https://codepen.io/jessachandler/pen/zYGEbRK)
 
@@ -49,6 +49,6 @@ There are 35 public health offices for 39 Washington counties. Benton/Franklin, 
  - Wahkiakum https://www.co.wahkiakum.wa.us/478/COVID-19-Information
  - Walla Walla https://www.co.walla-walla.wa.us/scroll_alert_detail.php
  - Whatcom https://www.whatcomcounty.us/3329/Novel-Coronavirus-COVID-19
- - Whitman https://www.whitmancountypublichealth.org/coronavirus-covid-19.html
+ - Whitman https://www.whitmancountypublichealth.org/covid-19.html
  - Yakima https://www.yakimacounty.us/2323/Human-Coronavirus
  
