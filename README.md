@@ -1,7 +1,7 @@
 # WA Covid 19
 
 Tracking public data for COVID-19 in Washington state
-**Last update 2020-03-11**
+**Last update 2020-03-12**
 
 The current page can be seen on [codepen](https://codepen.io/jessachandler/pen/zYGEbRK)
 
