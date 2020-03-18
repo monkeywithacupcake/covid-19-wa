@@ -261,7 +261,6 @@ var ddates = Array.prototype.concat.apply(
 var set = new Set(ddates);
 ddates = Array.from(set);
 ddates.sort();
-console.log(ddates);
 var dates = [];
 var startDate = ddates[0];
 var endDate = ddates[ddates.length - 1];
@@ -295,8 +294,10 @@ for (var i = 0; i < dates.length; ++i) {
 // fatality rates are all over the place, assume 3%
 // -> for each death count back 13 days and multiply by 33
 var hypothetical = [];
+var hypotheticalone = [];
 for (var i = 0; i < dates.length - 14; ++i) {
   hypothetical[i] = i == 0 ? 0 : 33 * deaths[i + 13];
+  hypotheticalone[i] = i == 0 ? 0 : 100 * deaths[i + 13];
 }
 // show a cumulative chart of all in wa
 var data = [
@@ -341,7 +342,18 @@ Plotly.newPlot("walineplotdiv", data, layout);
 var data = [
   { x: dates, y: positive, name: "Confirmed", type: "scatter" },
   { x: dates, y: deaths, name: "Dead", type: "scatter" },
-  { x: dates, y: hypothetical, name: "Hypothetical Cases", type: "scatter" }
+  {
+    x: dates,
+    y: hypothetical,
+    name: "Hypothetical Cases @ 3% Fatality",
+    type: "scatter"
+  },
+  {
+    x: dates,
+    y: hypotheticalone,
+    name: "Hypothetical Cases @ 1% Fatality",
+    type: "scatter"
+  }
 ];
 
 var layout = {
@@ -382,7 +394,8 @@ var layout = {
       y: -0.1,
       xanchor: "center",
       yanchor: "top",
-      text: "Hypothetical assumes 13 days median to death & 3% fatality rate",
+      text:
+        "Hypothetical based only on reported deaths and assumes 13 days median to death",
       showarrow: false,
       font: {
         family: "Arial",
