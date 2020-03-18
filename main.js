@@ -1,17 +1,17 @@
 // setup raw data
-var ghurl =
-  "https://raw.githubusercontent.com/monkeywithacupcake/covid-19-wa/master/dailydata.json";
-fetch(ghurl)
-  .then(res => res.json())
-  .then(out => {
-    console.log("Checkout this JSON! ", out);
-    // need to create a list of counties
-    // will need to create an object for each county
-    // create a date array, positive array, and dead array
-  })
-  .catch(err => {
-    throw err;
-  });
+//var ghurl =
+//"https://raw.githubusercontent.com/monkeywithacupcake/covid-19-wa/master/dailydata.json";
+//fetch(ghurl)
+//  .then(res => res.json())
+//  .then(out => {
+//    console.log("Checkout this JSON! ", out);
+// need to create a list of counties
+// will need to create an object for each county
+// create a date array, positive array, and dead array
+//  })
+//  .catch(err => {
+//    throw err;
+//  });
 var chelan = {
   name: "Chelan",
   lat: 47.9445,
@@ -26,7 +26,7 @@ var clark = {
   lon: -122.5194,
   date: ["2020-03-06", "2020-03-13", "2020-03-16"],
   positive: [1, 2, 1],
-  deaths: [0, 0,2]
+  deaths: [0, 0, 2]
 };
 var franklin = {
   name: "Franklin",
@@ -64,9 +64,9 @@ var jefferson = {
   name: "Jefferson",
   lat: 47.7425,
   lon: -123.304,
-  date: ["2020-03-06", "2020-03-13", "2020-03-16","2020-03-17"],
-  positive: [1, 1, 1,1],
-  deaths: [0, 0, 0,1]
+  date: ["2020-03-06", "2020-03-13", "2020-03-16", "2020-03-17"],
+  positive: [1, 1, 1, 1],
+  deaths: [0, 0, 0, 1]
 };
 var king = {
   name: "King",
@@ -91,8 +91,8 @@ var king = {
     "2020-03-15",
     "2020-03-16"
   ],
-  positive: [3, 7, 4, 7, 10, 20, 7, 13, 12, 33, 74, 44, 36, 58, 60, 32, 68,30],
-  deaths: [1, 1, 3, 3, 2, 1, 1, 2, 2, 3, 2, 4, 1, 5, 3, 2, 6,3]
+  positive: [3, 7, 4, 7, 10, 20, 7, 13, 12, 33, 74, 44, 36, 58, 60, 32, 68, 30],
+  deaths: [1, 1, 3, 3, 2, 1, 1, 2, 2, 3, 2, 4, 1, 5, 3, 2, 6, 3]
 };
 var kitsap = {
   name: "Kitsap",
@@ -139,18 +139,19 @@ var pierce = {
     "2020-03-12",
     "2020-03-13",
     "2020-03-14",
-    "2020-03-15", "2020-03-16"
+    "2020-03-15",
+    "2020-03-16"
   ],
-  positive: [1, 2, 4, 7, 3, 2, 7, 3, 9,6],
-  deaths: [0, 0, 0, 0, 0, 0, 0, 0, 0,0]
+  positive: [1, 2, 4, 7, 3, 2, 7, 3, 9, 6],
+  deaths: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 };
 var skagit = {
   name: "Skagit",
   lat: 48.4242,
   lon: -121.7114,
-  date: ["2020-03-10", "2020-03-12", "2020-03-13", "2020-03-16","2020-03-17"],
-  positive: [1, 1, 2, 3,2],
-  deaths: [0, 0, 0, 0,0]
+  date: ["2020-03-10", "2020-03-12", "2020-03-13", "2020-03-16", "2020-03-17"],
+  positive: [1, 1, 2, 3, 2],
+  deaths: [0, 0, 0, 0, 0]
 };
 var snohomish = {
   name: "Snohomish",
@@ -172,18 +173,19 @@ var snohomish = {
     "2020-03-12",
     "2020-03-13",
     "2020-03-14",
-    "2020-03-16", "2020-03-17"
+    "2020-03-16",
+    "2020-03-17"
   ],
-  positive: [1, 1, 1, 1, 2, 4, 9, 8, 4, 10, 15, 19, 33, 30, 16, 46,66],
-  deaths: [0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1,0]
+  positive: [1, 1, 1, 1, 2, 4, 9, 8, 4, 10, 15, 19, 33, 30, 16, 46, 66],
+  deaths: [0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 0]
 };
 var spokane = {
   name: "Spokane",
   lat: 47.658,
   lon: -117.4225,
-  date: ["2020-03-14","2020-03-17"],
-  positive: [3,1],
-  deaths: [0,0]
+  date: ["2020-03-14", "2020-03-17"],
+  positive: [3, 1],
+  deaths: [0, 0]
 };
 
 var thurston = {
@@ -198,22 +200,23 @@ var whatcom = {
   name: "Whatcom",
   lat: 48.8787,
   lon: -121.9719,
-  date: ["2020-03-11", "2020-03-13", "2020-03-16"],
-  positive: [1, 1, 1],
-  deaths: [0, 0, 0]
+  date: ["2020-03-11", "2020-03-13", "2020-03-16", "2020-03-17"],
+  positive: [1, 1, 1, 4],
+  deaths: [0, 0, 0, 0]
 };
 var yakima = {
   name: "Yakima",
   lat: 46.5436,
   lon: -120.7558,
-  date: ["2020-03-11", "2020-03-13", "2020-03-16","2020-03-17"],
-  positive: [2, 1, 1,1],
-  deaths: [0, 0, 0,1]
+  date: ["2020-03-11", "2020-03-13", "2020-03-16", "2020-03-17"],
+  positive: [2, 1, 1, 1],
+  deaths: [0, 0, 0, 1]
 };
 
-var counties = [chelan,
+var counties = [
+  chelan,
   clark,
-                franklin,
+  franklin,
   grant,
   graysharbor,
   island,
@@ -248,17 +251,27 @@ deathlist.innerHTML = totaldeath.join("");
 poslist.innerHTML = totalpos.join("");
 
 // make the plots
-var dates = Array.prototype.concat.apply(
+var ddates = Array.prototype.concat.apply(
   [],
   counties.map(function(d) {
     return d.date;
   })
 );
 
-var set = new Set(dates);
-dates = Array.from(set);
-dates.sort();
-console.log(dates);
+var set = new Set(ddates);
+ddates = Array.from(set);
+ddates.sort();
+console.log(ddates);
+var dates = [];
+var startDate = ddates[0];
+var endDate = ddates[ddates.length - 1];
+var dateMove = new Date(ddates[0]);
+var strDate = startDate;
+while (strDate < endDate) {
+  var strDate = dateMove.toISOString().slice(0, 10);
+  dates.push(strDate);
+  dateMove.setDate(dateMove.getDate() + 1);
+}
 
 var positive = [];
 var deaths = [];
@@ -275,7 +288,16 @@ for (var i = 0; i < dates.length; ++i) {
     }
   });
 }
-
+//
+// and let us make a hypothetical case estimate based on deaths
+// cdc says that median of 13 days to death (for those that die)
+// source: https://wwwnc.cdc.gov/eid/article/26/6/20-0320_article
+// fatality rates are all over the place, assume 3%
+// -> for each death count back 13 days and multiply by 33
+var hypothetical = [];
+for (var i = 0; i < dates.length - 14; ++i) {
+  hypothetical[i] = i == 0 ? 0 : 33 * deaths[i + 13];
+}
 // show a cumulative chart of all in wa
 var data = [
   { x: dates, y: positive, name: "Confirmed", type: "scatter" },
@@ -315,6 +337,63 @@ var layout = {
 };
 
 Plotly.newPlot("walineplotdiv", data, layout);
+// show a cumulative chart of all in wa
+var data = [
+  { x: dates, y: positive, name: "Confirmed", type: "scatter" },
+  { x: dates, y: deaths, name: "Dead", type: "scatter" },
+  { x: dates, y: hypothetical, name: "Hypothetical Cases", type: "scatter" }
+];
+
+var layout = {
+  title: {
+    text: "COVID-19 in Washington state w/hypothetical cases (cumulative)",
+    font: {
+      family: "Courier New, monospace",
+      size: 24
+    },
+    xref: "paper",
+    x: 0.05
+  },
+  xaxis: {
+    title: {
+      text: "Date",
+      font: {
+        family: "Courier New, monospace",
+        size: 18,
+        color: "#7f7f7f"
+      }
+    }
+  },
+  yaxis: {
+    title: {
+      text: "People",
+      font: {
+        family: "Courier New, monospace",
+        size: 18,
+        color: "#7f7f7f"
+      }
+    }
+  },
+  annotations: [
+    {
+      xref: "paper",
+      yref: "paper",
+      x: 0.5,
+      y: -0.1,
+      xanchor: "center",
+      yanchor: "top",
+      text: "Hypothetical assumes 13 days median to death & 3% fatality rate",
+      showarrow: false,
+      font: {
+        family: "Arial",
+        size: 10,
+        color: "rgb(150,150,150)"
+      }
+    }
+  ]
+};
+
+Plotly.newPlot("walineplotdivwhypo", data, layout);
 
 // show positive cumulative by county
 var barpositive = Array.prototype.concat.apply(
@@ -376,7 +455,7 @@ var scl = [
   [0.5, "#ee4d08"],
   [0.6, "#f75b18"],
   [0.7, "#f86d31"],
-  [1, "#f97e4a"]
+  [1, "#fff"]
 ];
 var mdata = [
   {
