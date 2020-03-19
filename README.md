@@ -10,7 +10,7 @@ The current page can be seen on [codepen](https://codepen.io/jessachandler/pen/z
 ## County update sites
 
 There are 35 public health offices for 39 Washington counties. Benton/Franklin, Chelan/Douglas, Ferry/Pend Oreille/Stevens are combined county public health. 
- - Adams http://www.co.adams.wa.us/departments/health_department/health.php
+ - Adams https://www.co.adams.wa.us/government/covid-19.php
  - Asotin http://www.asotincountypublichealth.org/apps/search?q=covid
  - Benton (with Franklin) https://www.bfhd.wa.gov/cms/One.aspx?portalId=10766056&pageId=16507813
  - Chelan (with Douglas) https://cdhd.wa.gov/
