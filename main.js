@@ -20,6 +20,14 @@ var chelan = {
   positive: [2],
   deaths: [0]
 };
+var clallam = {
+  name: "Clallam",
+  lat: 48.0405,
+  lon: -124.0168,
+  date: ["2020-03-18"],
+  positive: [1],
+  deaths: [0]
+};
 var clark = {
   name: "Clark",
   lat: 45.7466,
@@ -32,9 +40,9 @@ var franklin = {
   name: "Franklin",
   lat: 46.4937,
   lon: -118.8672,
-  date: ["2020-03-17"],
-  positive: [1],
-  deaths: [0]
+  date: ["2020-03-15","2020-03-17"], // death noted on 3/18 to have happened over the weekend, attrib to 3/15
+  positive: [1,1],
+  deaths: [1,0]
 };
 var grant = {
   name: "Grant",
@@ -52,13 +60,13 @@ var graysharbor = {
   positive: [1],
   deaths: [0]
 };
-var island = {
+var island = { // updates from Island are sporadic
   name: "Island",
   lat: 48.1976,
   lon: -122.5795,
-  date: ["2020-03-10", "2020-03-12"],
-  positive: [1, 2],
-  deaths: [0, 0]
+  date: ["2020-03-10", "2020-03-12","2020-03-19"],
+  positive: [1, 2,15],
+  deaths: [0, 0,1]
 };
 var jefferson = {
   name: "Jefferson",
@@ -89,26 +97,26 @@ var king = {
     "2020-03-13",
     "2020-03-14",
     "2020-03-15",
-    "2020-03-16"
+    "2020-03-16","2020-03-17","2020-03-18"
   ],
-  positive: [3, 7, 4, 7, 10, 20, 7, 13, 12, 33, 74, 44, 36, 58, 60, 32, 68, 30],
-  deaths: [1, 1, 3, 3, 2, 1, 1, 2, 2, 3, 2, 4, 1, 5, 3, 2, 6, 3]
+  positive: [3, 7, 4, 7, 10, 20, 7, 13, 12, 33, 74, 44, 36, 58, 60, 32, 68, 30,44],
+  deaths: [1, 1, 3, 3, 2, 1, 1, 2, 2, 3, 2, 4, 1, 5, 3, 2, 6, 3,10]
 };
 var kitsap = {
   name: "Kitsap",
   lat: 47.6477,
   lon: -122.6413,
-  date: ["2020-03-09", "2020-03-10", "2020-03-13", "2020-03-15", "2020-03-16"],
-  positive: [1, 1, 1, 2, 2],
-  deaths: [0, 0, 0, 0, 0]
+  date: ["2020-03-09", "2020-03-10", "2020-03-13", "2020-03-15", "2020-03-16","2020-03-18"],
+  positive: [1, 1, 1, 2, 2,2],
+  deaths: [0, 0, 0, 0, 0,0]
 };
 var kittitas = {
   name: "Kittitas",
   lat: 46.9832,
   lon: -120.417,
-  date: ["2020-03-09", "2020-03-11"],
-  positive: [1, 2],
-  deaths: [0, 0]
+  date: ["2020-03-09", "2020-03-11","2020-03-18"],
+  positive: [1, 2,1],
+  deaths: [0, 0,1]
 };
 var klickitat = {
   name: "Klickitat",
@@ -126,6 +134,14 @@ var lewis = {
   positive: [1],
   deaths: [0]
 };
+var mason = {
+  name: "Mason",
+  lat: 47.4251,
+  lon: -123.1951,
+  date: ["2020-03-17"],
+  positive: [1],
+  deaths: [0]
+};
 var pierce = {
   name: "Pierce",
   lat: 47.067,
@@ -140,18 +156,18 @@ var pierce = {
     "2020-03-13",
     "2020-03-14",
     "2020-03-15",
-    "2020-03-16"
+    "2020-03-16","2020-03-18"
   ],
-  positive: [1, 2, 4, 7, 3, 2, 7, 3, 9, 6],
-  deaths: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  positive: [1, 2, 4, 7, 3, 2, 7, 3, 9, 6,12],
+  deaths: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,1]
 };
 var skagit = {
   name: "Skagit",
   lat: 48.4242,
   lon: -121.7114,
-  date: ["2020-03-10", "2020-03-12", "2020-03-13", "2020-03-16", "2020-03-17"],
-  positive: [1, 1, 2, 3, 2],
-  deaths: [0, 0, 0, 0, 0]
+  date: ["2020-03-10", "2020-03-12", "2020-03-13", "2020-03-16", "2020-03-17","2020-03-18"],
+  positive: [1, 1, 2, 3, 2,5],
+  deaths: [0, 0, 0, 0, 0,0]
 };
 var snohomish = {
   name: "Snohomish",
@@ -174,27 +190,27 @@ var snohomish = {
     "2020-03-13",
     "2020-03-14",
     "2020-03-16",
-    "2020-03-17"
+    "2020-03-17","2020-03-18"
   ],
-  positive: [1, 1, 1, 1, 2, 4, 9, 8, 4, 10, 15, 19, 33, 30, 16, 46, 66],
-  deaths: [0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 0]
+  positive: [1, 1, 1, 1, 2, 4, 9, 8, 4, 10, 15, 19, 33, 30, 16, 46, 66,44],
+  deaths: [0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 0,1]
 };
 var spokane = {
   name: "Spokane",
   lat: 47.658,
   lon: -117.4225,
-  date: ["2020-03-14", "2020-03-17"],
-  positive: [3, 1],
-  deaths: [0, 0]
+  date: ["2020-03-14", "2020-03-17","2020-03-18"],
+  positive: [3, 1,1],
+  deaths: [0, 0,0]
 };
 
 var thurston = {
   name: "Thurston",
   lat: 46.8646,
   lon: -122.7696,
-  date: ["2020-03-11", "2020-03-14", "2020-03-16"],
-  positive: [1, 2, 2],
-  deaths: [0, 0, 0]
+  date: ["2020-03-11", "2020-03-14", "2020-03-16","2020-03-18"],
+  positive: [1, 2, 2,1],
+  deaths: [0, 0, 0,1]
 };
 var whatcom = {
   name: "Whatcom",
@@ -208,13 +224,13 @@ var yakima = {
   name: "Yakima",
   lat: 46.5436,
   lon: -120.7558,
-  date: ["2020-03-11", "2020-03-13", "2020-03-16", "2020-03-17"],
-  positive: [2, 1, 1, 1],
-  deaths: [0, 0, 0, 1]
+  date: ["2020-03-11", "2020-03-13", "2020-03-16", "2020-03-17","2020-03-18"],
+  positive: [2, 1, 1, 1,4],
+  deaths: [0, 0, 0, 1,0]
 };
 
 var counties = [
-  chelan,
+  chelan,clallam,
   clark,
   franklin,
   grant,
@@ -225,7 +241,7 @@ var counties = [
   kitsap,
   kittitas,
   klickitat,
-  lewis,
+  lewis, mason,
   pierce,
   skagit,
   snohomish,
