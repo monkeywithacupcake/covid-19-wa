@@ -32,9 +32,9 @@ var clark = {
   name: "Clark",
   lat: 45.7466,
   lon: -122.5194,
-  date: ["2020-03-06", "2020-03-13", "2020-03-16","2020-03-19"],
-  positive: [1, 2, 1,0],
-  deaths: [0, 0, 2,1]
+  date: ["2020-03-06", "2020-03-13", "2020-03-16", "2020-03-19"],
+  positive: [1, 2, 1, 0],
+  deaths: [0, 0, 2, 1]
 };
 var columbia = {
   name: "Columbia",
@@ -48,17 +48,17 @@ var franklin = {
   name: "Franklin",
   lat: 46.4937,
   lon: -118.8672,
-  date: ["2020-03-15","2020-03-17","2020-03-19"], // death noted on 3/18 to have happened over the weekend, attrib to 3/15
-  positive: [1,1,2],
-  deaths: [1,0,0]
+  date: ["2020-03-15", "2020-03-17", "2020-03-19"], // death noted on 3/18 to have happened over the weekend, attrib to 3/15
+  positive: [1, 1, 2],
+  deaths: [1, 0, 0]
 };
 var grant = {
   name: "Grant",
   lat: 47.1981,
   lon: -119.3732,
-  date: ["2020-03-05", "2020-03-08", "2020-03-13", "2020-03-16","2020-03-19"],
-  positive: [1, 0, 1, 5,1],
-  deaths: [0, 1, 0, 0,0]
+  date: ["2020-03-05", "2020-03-08", "2020-03-13", "2020-03-16", "2020-03-19"],
+  positive: [1, 0, 1, 5, 1],
+  deaths: [0, 1, 0, 0, 0]
 };
 var graysharbor = {
   name: "Grays Harbor",
@@ -68,13 +68,14 @@ var graysharbor = {
   positive: [1],
   deaths: [0]
 };
-var island = { // updates from Island are sporadic
+var island = {
+  // updates from Island are sporadic
   name: "Island",
   lat: 48.1976,
   lon: -122.5795,
-  date: ["2020-03-10", "2020-03-12","2020-03-19"],
-  positive: [1, 2,14],
-  deaths: [0, 0,1]
+  date: ["2020-03-10", "2020-03-12", "2020-03-19"],
+  positive: [1, 2, 14],
+  deaths: [0, 0, 1]
 };
 var jefferson = {
   name: "Jefferson",
@@ -105,26 +106,58 @@ var king = {
     "2020-03-13",
     "2020-03-14",
     "2020-03-15",
-    "2020-03-16","2020-03-17","2020-03-18","2020-03-19"
+    "2020-03-16",
+    "2020-03-17",
+    "2020-03-18",
+    "2020-03-19"
   ],
-  positive: [3, 7, 4, 7, 10, 20, 7, 13, 12, 33, 74, 44, 36, 58, 60, 32, 68, 30,44,131],
-  deaths: [1, 1, 3, 3, 2, 1, 1, 2, 2, 3, 2, 4, 1, 5, 3, 2, 6, 3,10,4]
+  positive: [
+    3,
+    7,
+    4,
+    7,
+    10,
+    20,
+    7,
+    13,
+    12,
+    33,
+    74,
+    44,
+    36,
+    58,
+    60,
+    32,
+    68,
+    30,
+    44,
+    131
+  ],
+  deaths: [1, 1, 3, 3, 2, 1, 1, 2, 2, 3, 2, 4, 1, 5, 3, 2, 6, 3, 10, 4]
 };
 var kitsap = {
   name: "Kitsap",
   lat: 47.6477,
   lon: -122.6413,
-  date: ["2020-03-09", "2020-03-10", "2020-03-13", "2020-03-15", "2020-03-16","2020-03-18","2020-03-19"],
-  positive: [1, 1, 1, 2, 2,2,3],
-  deaths: [0, 0, 0, 0, 0,0,0]
+  date: [
+    "2020-03-09",
+    "2020-03-10",
+    "2020-03-13",
+    "2020-03-15",
+    "2020-03-16",
+    "2020-03-18",
+    "2020-03-19"
+  ],
+  positive: [1, 1, 1, 2, 2, 2, 3],
+  deaths: [0, 0, 0, 0, 0, 0, 0]
 };
 var kittitas = {
   name: "Kittitas",
   lat: 46.9832,
   lon: -120.417,
-  date: ["2020-03-09", "2020-03-11","2020-03-18"],
-  positive: [1, 2,1],
-  deaths: [0, 0,1]
+  date: ["2020-03-09", "2020-03-11", "2020-03-18"],
+  positive: [1, 2, 1],
+  deaths: [0, 0, 1]
 };
 var klickitat = {
   name: "Klickitat",
@@ -172,18 +205,28 @@ var pierce = {
     "2020-03-13",
     "2020-03-14",
     "2020-03-15",
-    "2020-03-16","2020-03-18","2020-03-19"
+    "2020-03-16",
+    "2020-03-18",
+    "2020-03-19"
   ],
-  positive: [1, 2, 4, 7, 3, 2, 7, 3, 9, 6,12,19],
-  deaths: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,1,0]
+  positive: [1, 2, 4, 7, 3, 2, 7, 3, 9, 6, 12, 19],
+  deaths: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0]
 };
 var skagit = {
   name: "Skagit",
   lat: 48.4242,
   lon: -121.7114,
-  date: ["2020-03-10", "2020-03-12", "2020-03-13", "2020-03-16", "2020-03-17","2020-03-18","2020-03-19"],
-  positive: [1, 1, 2, 3, 2,5,4],
-  deaths: [0, 0, 0, 0, 0,0,0]
+  date: [
+    "2020-03-10",
+    "2020-03-12",
+    "2020-03-13",
+    "2020-03-16",
+    "2020-03-17",
+    "2020-03-18",
+    "2020-03-19"
+  ],
+  positive: [1, 1, 2, 3, 2, 5, 4],
+  deaths: [0, 0, 0, 0, 0, 0, 0]
 };
 var snohomish = {
   name: "Snohomish",
@@ -206,27 +249,29 @@ var snohomish = {
     "2020-03-13",
     "2020-03-14",
     "2020-03-16",
-    "2020-03-17","2020-03-18","2020-03-19"
+    "2020-03-17",
+    "2020-03-18",
+    "2020-03-19"
   ],
-  positive: [1, 1, 1, 1, 2, 4, 9, 8, 4, 10, 15, 19, 33, 30, 16, 46, 66,44,38],
-  deaths: [0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 0,1,0]
+  positive: [1, 1, 1, 1, 2, 4, 9, 8, 4, 10, 15, 19, 33, 30, 16, 46, 66, 44, 38],
+  deaths: [0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 0, 1, 0]
 };
 var spokane = {
   name: "Spokane",
   lat: 47.658,
   lon: -117.4225,
-  date: ["2020-03-14", "2020-03-17","2020-03-18","2020-03-19"],
-  positive: [3, 1,1,4],
-  deaths: [0, 0,0,0]
+  date: ["2020-03-14", "2020-03-17", "2020-03-18", "2020-03-19"],
+  positive: [3, 1, 1, 4],
+  deaths: [0, 0, 0, 0]
 };
 
 var thurston = {
   name: "Thurston",
   lat: 46.8646,
   lon: -122.7696,
-  date: ["2020-03-11", "2020-03-14", "2020-03-16","2020-03-18"],
-  positive: [1, 2, 2,1],
-  deaths: [0, 0, 0,1]
+  date: ["2020-03-11", "2020-03-14", "2020-03-16", "2020-03-18"],
+  positive: [1, 2, 2, 1],
+  deaths: [0, 0, 0, 1]
 };
 var whatcom = {
   name: "Whatcom",
@@ -240,14 +285,16 @@ var yakima = {
   name: "Yakima",
   lat: 46.5436,
   lon: -120.7558,
-  date: ["2020-03-11", "2020-03-13", "2020-03-16", "2020-03-17","2020-03-18"],
-  positive: [2, 1, 1, 1,4],
-  deaths: [0, 0, 0, 1,0]
+  date: ["2020-03-11", "2020-03-13", "2020-03-16", "2020-03-17", "2020-03-18"],
+  positive: [2, 1, 1, 1, 4],
+  deaths: [0, 0, 0, 1, 0]
 };
 
 var counties = [
-  chelan,clallam,
-  clark, columbia,
+  chelan,
+  clallam,
+  clark,
+  columbia,
   franklin,
   grant,
   graysharbor,
@@ -257,7 +304,9 @@ var counties = [
   kitsap,
   kittitas,
   klickitat,
-  lewis, lincoln, mason,
+  lewis,
+  lincoln,
+  mason,
   pierce,
   skagit,
   snohomish,
@@ -327,7 +376,7 @@ for (var i = 0; i < dates.length; ++i) {
 // -> for each death count back 13 days and multiply by 33
 var hypothetical = [];
 var hypotheticalone = [];
-for (var i = 0; i < dates.length - 14; ++i) {
+for (var i = 0; i < dates.length - 13; ++i) {
   hypothetical[i] = i == 0 ? 0 : 33 * deaths[i + 13];
   hypotheticalone[i] = i == 0 ? 0 : 100 * deaths[i + 13];
 }
@@ -339,7 +388,7 @@ var data = [
 
 var layout = {
   title: {
-    text: "COVID-19 in Washington state over time (cumulative)",
+    text: "COVID-19 in Washington state over time",
     font: {
       family: "Courier New, monospace",
       size: 24
@@ -390,7 +439,7 @@ var data = [
 
 var layout = {
   title: {
-    text: "COVID-19 in Washington state w/hypothetical cases (cumulative)",
+    text: "COVID-19 in Washington state w/hypothetical cases",
     font: {
       family: "Courier New, monospace",
       size: 24
@@ -427,7 +476,7 @@ var layout = {
       xanchor: "center",
       yanchor: "top",
       text:
-        "Hypothetical based only on reported deaths and assumes 13 days median to death",
+        "Hypothetical based only on reported deaths and assumes 13 days median to death source: https://wwwnc.cdc.gov/eid/article/26/6/20-0320_article",
       showarrow: false,
       font: {
         family: "Arial",
@@ -532,19 +581,27 @@ var mdata = [
 ];
 
 var mlayout = {
-  title: "MAP - Current WA COVID-19 (scale by confirmed cases)",
+  title: {
+    text: "MAP - Current WA COVID-19",
+    font: {
+      family: "Courier New, monospace",
+      size: 24
+    },
+    xref: "paper",
+    x: 0.05
+  },
   showlegend: false,
   geo: {
     scope: "usa",
     center: {
-      lon: -120,
-      lat: 47
+      lon: -120.7,
+      lat: 47.7
     },
-    lonaxis: { range: [-116, -125] },
-    lataxis: { range: [45, 50] },
+    lonaxis: { range: [-117, -124.2] },
+    lataxis: { range: [45.6, 49.2] },
     showland: true,
     landcolor: "rgb(217, 217, 217)",
-    subunitcolor: "rgb(250,255,255)",
+    subunitcolor: "rgb(55,55,55)",
     countrycolor: "rgb(255,255,255)"
   }
 };
@@ -559,6 +616,7 @@ Plotly.newPlot(
 // add totals to title
 var totPos = ctyPos.reduce(mySum);
 var totDea = ctyDea.reduce(mySum);
+
 document.getElementById("wacounts").innerHTML =
   totPos + " Cases & " + totDea + " Deaths";
 document.getElementById("wacfr").innerHTML =
@@ -566,4 +624,10 @@ document.getElementById("wacfr").innerHTML =
   counties.length +
   " of 39 WA counties. The statewide Case Fatality Rate (CFR) is " +
   ((totDea / totPos) * 100).toFixed(1) +
-  "%; CFR by county is on the map.";
+  "%; CFR by county is on the map below. Hypothetical cases on " +
+  dates[dates.length - 14] +
+  " are estimated at: " +
+  hypothetical[hypothetical.length - 1] +
+  " assuming a 3% death rate and " +
+  hypotheticalone[hypotheticalone.length - 1] +
+  " assuming a 1% death rate. This estimate is based of of the CDC estimate of median of 13 days to death (for those that die)";
