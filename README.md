@@ -40,7 +40,7 @@ There are 35 public health offices for 39 Washington counties. Benton/Franklin, 
  - San Juan https://www.sanjuanco.com/1682/COVID-19-SJC-Case-Count
  - Skagit https://www.skagitcounty.net/Departments/HealthDiseases/coronavirus.htm
  - Skamania https://www.skamaniacounty.org/departments-offices/community-health
- - Snohomish https://www.snohd.org/484/Novel-Coronavirus-2019
+ - Snohomish https://www.snohd.org/499/COVID-19-Case-Count-Info
  - Spokane https://srhd.org/
  - Stevens (see Ferry)
  - Thurston https://www.thurstoncountywa.gov/phss/Pages/coronavirus.aspx
