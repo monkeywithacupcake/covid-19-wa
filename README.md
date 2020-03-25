@@ -24,7 +24,7 @@ There are 35 public health offices for 39 Washington counties. Benton/Franklin, 
  - Garfield https://co.garfield.wa.us/public-health
  - Grant http://granthealth.org/updates-for-covid-19-in-grant-county/
  - Grays Harbor http://www.healthygh.org/covid19
- - Island https://www.islandcountywa.gov/health/Pages/Home.aspx
+ - Island https://www.islandcountywa.gov/Health/Pages/COVID-19.aspx
  - Jefferson https://www.jeffersoncountypublichealth.org/1429/COVID-19
  - King https://www.kingcounty.gov/depts/health/news.aspx
  - Kitsap https://kitsappublichealth.org/CommunityHealth/CoronaVirus.php
