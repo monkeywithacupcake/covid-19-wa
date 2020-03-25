@@ -619,6 +619,7 @@ for (var i = 0; i < dates.length; ++i) {
     }
   });
 }
+
 //
 // and let us make a hypothetical case estimate based on deaths
 // cdc says that median of 13 days to death (for those that die)
@@ -631,6 +632,20 @@ for (var i = 0; i < dates.length - 13; ++i) {
   hypothetical[i] = i == 0 ? 0 : 33 * deaths[i + 13];
   hypotheticalone[i] = i == 0 ? 0 : 100 * deaths[i + 13];
 }
+// and let us calculate the current doubling rate (for the past 7 days).
+var doubling = [];
+function getIndexToIns(arr, num) {
+  return arr
+    .concat(num)
+    .sort((a, b) => a - b)
+    .indexOf(num);
+}
+for (var i = positive.length - 7; i < positive.length; ++i) {
+  var half = positive[i] / 2;
+  var match = getIndexToIns(positive, half - 1);
+  doubling[positive.length - i - 1] = i - match;
+}
+console.log(doubling);
 // show a cumulative chart of all in wa
 var data = [
   { x: dates, y: positive, name: "Confirmed", type: "scatter" },
@@ -672,7 +687,7 @@ var layout = {
   height: 600,
   margin: {
     l: 100,
-    r: 20,
+    r: 100,
     b: 100,
     t: 100,
     pad: 4
@@ -867,6 +882,9 @@ Plotly.newPlot(
   { displayModeBar: true }
 );
 
+function average(array) {
+  return Math.round(array.reduce((acc, next) => acc + next) / array.length);
+}
 // add totals to title
 var totPos = ctyPos.reduce(mySum);
 var totDea = ctyDea.reduce(mySum);
@@ -876,7 +894,11 @@ document.getElementById("wacounts").innerHTML =
 document.getElementById("wacfr").innerHTML =
   "There are positive cases in " +
   counties.length +
-  " of 39 WA counties. The statewide Case Fatality Rate (CFR) is " +
+  " of 39 WA counties. The current doubling rate is " +
+  doubling[0] +
+  " days. The average doubling rate for the past week has been " +
+  average(doubling) +
+  " days. The statewide Case Fatality Rate (CFR) is " +
   ((totDea / totPos) * 100).toFixed(1) +
   "%; CFR by county is on the map below. Hypothetical cases on " +
   dates[dates.length - 14] +
