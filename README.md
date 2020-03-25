@@ -45,7 +45,7 @@ There are 35 public health offices for 39 Washington counties. Benton/Franklin, 
  - Stevens (see Ferry)
  - Thurston https://www.thurstoncountywa.gov/phss/Pages/coronavirus.aspx
  - Wahkiakum https://www.co.wahkiakum.wa.us/478/COVID-19-Information
- - Walla Walla https://www.co.walla-walla.wa.us/scroll_alert_detail.php
+ - Walla Walla https://www.co.walla-walla.wa.us/government/health_department/index.php
  - Whatcom https://www.whatcomcounty.us/3329/Novel-Coronavirus-COVID-19
  - Whitman https://www.whitmancountypublichealth.org/covid-19.html
  - Yakima https://www.yakimacounty.us/2323/Human-Coronavirus
