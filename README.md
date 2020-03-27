@@ -33,7 +33,7 @@ There are 35 public health offices for 39 Washington counties. Benton/Franklin, 
  - Lewis https://lewiscountywa.gov/departments/public-health/blog/
  - Lincoln https://www.co.lincoln.wa.us/public-health/
  - Mason http://www.co.mason.wa.us/COVID-19/index.php
- - Okanogan https://okanogancounty.org/ocph/
+ - Okanogan https://www.okanogandem.org/novel-coronavirus19-covid-19
  - Pacific http://pacificcountyhealthdepartment.com/covid-19/
  - Pend Oreille (with Ferry)
  - Pierce https://www.tpchd.org/healthy-people/diseases/covid-19-pierce-county-cases/
