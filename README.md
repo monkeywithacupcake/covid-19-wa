@@ -29,7 +29,7 @@ There are 35 public health offices for 39 Washington counties. Benton/Franklin, 
  - King https://www.kingcounty.gov/depts/health/news.aspx
  - Kitsap https://kitsappublichealth.org/CommunityHealth/CoronaVirus.php
  - Kittitas https://www.co.kittitas.wa.us/response/202003-covid19/default.aspx
- - Klickitat http://klickitatcounty.org/
+ - Klickitat http://klickitatcounty.org/1187/7114/COVID-19
  - Lewis https://lewiscountywa.gov/departments/public-health/blog/
  - Lincoln https://www.co.lincoln.wa.us/public-health/
  - Mason http://www.co.mason.wa.us/COVID-19/index.php
