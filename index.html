@@ -1,38 +1,49 @@
 <head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
   <!-- Load plotly.js into the DOM -->
   <script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
+  <script src="https://d3js.org/d3-dsv.v1.min.js"></script>
+  <script src="https://d3js.org/d3-fetch.v1.min.js"></script>
 </head>
 
 <body>
-  <header>
+  <header class="primary">
     <h1>Washington State Covid 19</h1>
+    <h2 id='wacounts'></h2>
   </header>
-  <div id='walineplotdiv'></div>  
+  <div class="jumbotron">
+    <p id='wacfr'></p>
+    <div class="font-weight-light">
+      <ul>
+        <li>2020-01-21: WA first case</li>
+        <li>2020-03-16: All schools closed</li>
+        <li>2020-03-25: All non-essential business closed</li>
+      </ul>
+    </div>
+  </div>
+  <div id='walineplotdiv'></div>
   <div id='map'> </div>
   <div id='bycounty'>
     <h2>Data by County</h2>
+    <div id="ctable">
+    </div>
     <div id="pos">
       <h3>Positive/Confirmed Cases</h3>
-      <ul id="poslist"></ul>
       <div id='posbycounty'></div>
     </div>
     <div id="death">
       <h3>Deaths</h3>
-      <ul id="deathlist"></ul>
       <div id='deathbycounty'></div>
     </div>
   </div>
+  <div id='walineplotdivwhypo'></div>
+
   <footer>
-    Data updated regularly from counties and the <a href="https://www.doh.wa.gov/emergencies/coronavirus">WA Dept of
-      Health</a>. Counts may not exactly match those on the WA DOH page, given timing of county updates. Best effort is
-    used to count new cases and deaths that the county is reporting that day (most counties update around 1100).
+    <h4>Notes </h4>
     <ul>
-      <li><a href="https://www.clark.wa.gov/public-health">Clark</a></li>
-      <li><a href="http://granthealth.org/updates-for-covid-19-in-grant-county/">Grant</a></li>
-      <li><a href="https://jeffersoncountypublichealth.org/1429/COVID-19">Jefferson</a></li>
-      <li><a href="https://www.kingcounty.gov/depts/health/news.aspx">King</a></li>
-      <li><a href="https://www.snohd.org/484/Novel-Coronavirus-2019">Snohomish</a> - Snohomish positive are "confirmed"
-        and do not include the "probable" cases. Snohomish reported the first US case.
-    </ul>
+      <li> The Case Fatality Rate is the number of reported deaths divided by the number of confirmed and reported cases. This number is useful for understanding reported deaths and cases but does not represent disease risk or mortality.</li>
+      <li>County reporting for Negative, Pending, and Hospitalizations are inconsistent. I am starting to include them as data points where they are found.</li>
+      <li>On 27 March, I started including "probable" cases as positive where they were reported. This caused jumps in a few county cases where the people in "presumed/probable" never moved to "confirmed". </li>
   </footer>
 </body>
