@@ -24,7 +24,7 @@ There are 35 public health offices for 39 Washington counties. Benton/Franklin, 
  - Grays Harbor http://www.healthygh.org/covid19
  - Island https://www.islandcountywa.gov/Health/Pages/COVID-19.aspx
  - Jefferson https://www.jeffersoncountypublichealth.org/1429/COVID-19
- - King https://www.kingcounty.gov/depts/health/news.aspx
+ - King https://www.kingcounty.gov/depts/health/communicable-diseases/disease-control/novel-coronavirus/data-dashboard.aspx
  - Kitsap https://kitsappublichealth.org/CommunityHealth/CoronaVirus.php
  - Kittitas https://www.co.kittitas.wa.us/response/202003-covid19/default.aspx
  - Klickitat http://klickitatcounty.org/1187/7114/COVID-19
