@@ -48,3 +48,4 @@ There are 35 public health offices for 39 Washington counties. Benton/Franklin, 
  - Whitman https://www.whitmancountypublichealth.org/covid-19.html
  - Yakima https://www.yakimacounty.us/2323/Human-Coronavirus
  
+Good backup data for NCW [Wenatchee World](https://www.wenatcheeworld.com/news/coronavirus/live-updates-covid-19-case-counts-in-north-central-washington/article_4718df8c-6e16-11ea-979a-133a4d542645.html)
