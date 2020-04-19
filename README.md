@@ -11,7 +11,7 @@ There are 35 public health offices for 39 Washington counties. Benton/Franklin, 
  - Adams https://www.co.adams.wa.us/government/covid-19.php
  - Asotin http://www.asotincountypublichealth.org/
  - Benton (with Franklin) https://www.bfhd.wa.gov/cms/One.aspx?portalId=10766056&pageId=16584954
- - Chelan (with Douglas) https://cdhd.wa.gov/
+ - Chelan (with Douglas) https://cdhd.wa.gov/covid-19/
  - Clallam http://www.clallam.net/Coronavirus/
  - Clark https://www.clark.wa.gov/public-health/novel-coronavirus
  - Columbia https://www.columbiaco.com/index.aspx?nid=18
