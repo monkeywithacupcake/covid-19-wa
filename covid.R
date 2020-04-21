@@ -29,6 +29,14 @@ pos_average <- pos_data %>%
          obs = row_number()) %>%
   select(tag, obs, cum, movave)
 
+
+
+# let us set up a legend for the graph
+legend <- pos_average %>%
+  group_by(tag) %>%
+  filter(obs == max(obs)) %>%
+  select(label = tag, y_pos = movave, x_pos = obs)
+
 ggplot(pos_average, aes(x = obs, y = movave, color = tag)) +
   geom_line() + 
   labs(title = "COVID-19 Case Curves",
@@ -36,7 +44,11 @@ ggplot(pos_average, aes(x = obs, y = movave, color = tag)) +
        color = "County",
        x="Days Since 3rd Case", 
        y = "New Reported Cases per Day") + 
-  theme_minimal() + theme(legend.key.height=unit(.6,"line"))
+  expand_limits(x = c(0, 80)) +
+  theme_minimal() + 
+  theme(legend.position = "none") +
+  geom_text(data = legend, aes(x = x_pos, y = y_pos, label = label, color = label, hjust = 0, vjust = 1)) 
+
 
 ggplot(pos_average, aes(x = obs, y = movave, color = tag)) +
   geom_line() + 
@@ -46,5 +58,8 @@ ggplot(pos_average, aes(x = obs, y = movave, color = tag)) +
        color = "County",
        x="Days Since 3rd Case", 
        y = "New Reported Cases per Day") + 
-  theme_minimal() + theme(legend.key.height=unit(.6,"line"))
+  expand_limits(x = c(0, 80)) +
+  theme_minimal() + 
+  theme(legend.position = "none") +
+  geom_text(data = legend, aes(x = x_pos, y = y_pos, label = label, color = label, hjust = 0, vjust = 1)) 
  
