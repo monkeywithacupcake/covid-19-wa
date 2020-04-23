@@ -8,6 +8,9 @@ pos_data <- positive %>%
   replace(is.na(.), 0) 
 pos_data$date <- as.Date(pos_data$date)
 
+# remove today because missing for many health districts
+pos_data <- pos_data %>%
+  filter(date < Sys.Date())
 
 pos_totals <- pos_data %>% 
   group_by(tag) %>% 
