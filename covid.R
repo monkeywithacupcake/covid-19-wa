@@ -60,7 +60,12 @@ ggplot(graph_data, aes(x = obs, y = movave)) +
        x="Days Since 3rd Case",
        color = "Counties",
        y = "New Reported Cases per Day",
-       caption = "Based on 35 WA Health Departments reporting as of 1800 4/21 \n data at https://github.com/monkeywithacupcake/covid-19-wa") +  
+       caption = paste("Based on 35 WA Health Departments reporting through", 
+                       Sys.Date() - 1,
+                       "as of 1800",
+                       Sys.Date(), 
+                       "\n data at https://github.com/monkeywithacupcake/covid-19-wa",
+                       sep=" ")) +  
   expand_limits(x = c(0, 80)) +
   theme_minimal() + 
   theme(legend.justification=c(1,0), legend.position=c(1,0))  
@@ -75,7 +80,12 @@ ggplot(graph_data, aes(x = obs, y = movave)) +
        x="Days Since 3rd Case",
        color = "Current Trend",
        y = "New Reported Cases per Day",
-       caption = "Based on 35 WA Health Departments reporting as of 1800 4/21 \n data at https://github.com/monkeywithacupcake/covid-19-wa") +  
+       paste("Based on 35 WA Health Departments reporting through", 
+             Sys.Date() - 1,
+             "as of 1800",
+             Sys.Date(), 
+             "\n data at https://github.com/monkeywithacupcake/covid-19-wa",
+             sep=" "))+  
   expand_limits(x = c(0, 80)) +
   theme_minimal() + 
   theme(legend.justification=c(1,0), legend.position=c(1,0)) +
