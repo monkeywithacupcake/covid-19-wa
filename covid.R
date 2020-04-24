@@ -8,6 +8,8 @@ pos_data <- positive %>%
   replace(is.na(.), 0) 
 pos_data$date <- as.Date(pos_data$date)
 
+
+
 # remove today because missing for many health districts
 pos_data <- pos_data %>%
   filter(date < Sys.Date())
@@ -80,7 +82,7 @@ ggplot(graph_data, aes(x = obs, y = movave)) +
        x="Days Since 3rd Case",
        color = "Current Trend",
        y = "New Reported Cases per Day",
-       paste("Based on 35 WA Health Departments reporting through", 
+       caption = paste("Based on 35 WA Health Departments reporting through", 
              Sys.Date() - 1,
              "as of 1800",
              Sys.Date(), 
@@ -94,3 +96,36 @@ ggplot(graph_data, aes(x = obs, y = movave)) +
                 hjust = 0, vjust = 1),
             show.legend = FALSE) 
 ggsave("~/Desktop/covid-19-wa-log.png") 
+
+
+state_pos <- pos_data %>% 
+  group_by(date) %>%
+  summarise(count = sum(count))
+state_avg <- state_pos %>%
+  mutate(cum = cumsum(count)) %>%
+  filter(cum > 3) %>%
+  arrange(date) %>%
+  mutate(lag1=lag(count),
+         lag2=lag(count,2),
+         lag3=lag(count,3),
+         lag4=lag(count,4),
+         movave=(count+lag1+lag2+lag3+lag4)/5,
+         obs = row_number()) %>%
+  select(obs, cum, movave)
+
+ggplot(state_avg, aes(x = obs, y = movave)) +
+  geom_line() +
+  #scale_y_log10() +
+  labs(title = "COVID-19 Case Curves",
+       subtitle = "5 day moving average, Whole State",
+       x="Days Since 3rd Case",
+       color = "Current Trend",
+       y = "New Reported Cases per Day",
+       caption = paste("Based on 35 WA Health Departments reporting through", 
+             Sys.Date() - 1,
+             "as of 1800",
+             Sys.Date(), 
+             "\n data at https://github.com/monkeywithacupcake/covid-19-wa",
+             sep=" "))+  
+  theme_minimal()
+ggsave("~/Desktop/covid-19-wa-state.png") 
