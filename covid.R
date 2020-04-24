@@ -98,29 +98,68 @@ ggplot(graph_data, aes(x = obs, y = movave)) +
 ggsave("~/Desktop/covid-19-wa-log.png") 
 
 
+## get the death data
+death_raw <- read_csv('~/Desktop/wacounty - deaths.csv',
+                     col_types = list(tag = col_character(),
+                                      .default = col_double()))
+d_data <- death_raw %>%
+  pivot_longer(-tag, names_to = "date", values_to = "deaths") %>% 
+  replace(is.na(.), 0) 
+d_data$date <- as.Date(d_data$date)
+
+# remove today because missing for many health districts
+d_data <- d_data %>%
+  filter(date < Sys.Date())
+
+
+## make a state aggregate
 state_pos <- pos_data %>% 
   group_by(date) %>%
   summarise(count = sum(count))
+## make a state aggregate
+state_dead <- d_data %>% 
+  group_by(date) %>%
+  summarise(deaths = sum(deaths))
 state_avg <- state_pos %>%
-  mutate(cum = cumsum(count)) %>%
+  left_join(state_dead) %>%
+  mutate(cum = cumsum(count), cumdead = cumsum(deaths)) %>%
   filter(cum > 3) %>%
   arrange(date) %>%
-  mutate(lag1=lag(count),
-         lag2=lag(count,2),
-         lag3=lag(count,3),
-         lag4=lag(count,4),
+  mutate(lag1=lag(count), d1 = lag(deaths),
+         lag2=lag(count,2), d2 = lag(deaths, 2),
+         lag3=lag(count,3), d3 = lag(deaths, 3),
+         lag4=lag(count,4), d4 = lag(deaths, 4),
          movave=(count+lag1+lag2+lag3+lag4)/5,
+         movavedead = (deaths+d1+d2+d3+d4)/5,
          obs = row_number()) %>%
-  select(obs, cum, movave)
+  select(obs, cum, movave, cumdead, movavedead, date)
 
 ggplot(state_avg, aes(x = obs, y = movave)) +
   geom_line() +
-  #scale_y_log10() +
+  scale_y_log10() +
   labs(title = "COVID-19 Case Curves",
        subtitle = "5 day moving average, Whole State",
        x="Days Since 3rd Case",
        color = "Current Trend",
        y = "New Reported Cases per Day",
+       caption = paste("Based on 35 WA Health Departments reporting through", 
+                       Sys.Date() - 1,
+                       "as of 1800",
+                       Sys.Date(), 
+                       "\n data at https://github.com/monkeywithacupcake/covid-19-wa",
+                       sep=" "))+  
+  theme_minimal()
+ggsave("~/Desktop/covid-19-wa-state.png") 
+
+ggplot(state_avg, aes(x = obs, y = movave)) +
+  geom_line() +
+  geom_line(aes(y = movavedead), color = "#993333") +
+  scale_y_log10() +
+  labs(title = "COVID-19 Case & Death Curves - Log Scale",
+       subtitle = "5 day moving average, Whole State",
+       x="Days Since 3rd Case",
+       color = "Current Trend",
+       y = "New Reported Cases / Deaths per Day",
        caption = paste("Based on 35 WA Health Departments reporting through", 
              Sys.Date() - 1,
              "as of 1800",
@@ -128,4 +167,4 @@ ggplot(state_avg, aes(x = obs, y = movave)) +
              "\n data at https://github.com/monkeywithacupcake/covid-19-wa",
              sep=" "))+  
   theme_minimal()
-ggsave("~/Desktop/covid-19-wa-state.png") 
+ggsave("~/Desktop/covid-19-wa-state-log-w-death.png") 
