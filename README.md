@@ -15,7 +15,7 @@ There are 35 public health offices for 39 Washington counties. Benton/Franklin, 
  - Clallam http://www.clallam.net/Coronavirus/
  - Clark https://www.clark.wa.gov/public-health/novel-coronavirus
  - Columbia https://www.columbiaco.com/index.aspx?nid=18
- - Cowlitz https://www.co.cowlitz.wa.us/2660/Novel-Coronavirus-COVID-19
+ - Cowlitz http://apps.co.cowlitz.wa.us/Forms/PublicPatientInfoCVD19
  - Douglas (with Chelan)
  - Ferry (with Pend Oreille and Stevens) https://www.netchd.org/
  - Franklin (with Benton)
