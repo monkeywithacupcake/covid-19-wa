@@ -1,4 +1,5 @@
 library(tidyverse)
+`%ni%` = Negate(`%in%`)
 
 positive_raw <- read_csv('~/Desktop/wacounty - positive.csv',
                      col_types = list(tag = col_character(),
@@ -53,6 +54,24 @@ graph_county_pos <- average %>%
   mutate(obs = row_number()) %>%
   select(obs, cum_pos, movave_pos)
 
+graph_county_other <- data %>%
+  filter(tag %ni% compare_counties_pos) %>%
+  group_by(date) %>%
+  summarise(positive = sum(positive),
+            dead = sum(dead)) %>%
+  mutate(cum_pos = cumsum(positive),
+         cum_dea = cumsum(dead)) %>%
+  arrange(date) %>%
+  mutate(p1=lag(positive), d1 = lag(dead),
+         p2=lag(positive,2), d2 = lag(dead, 2),
+         p3=lag(positive,3), d3 = lag(dead, 3),
+         p4=lag(positive,4), d4 = lag(dead, 4),
+         movave_pos=(positive+p1+p2+p3+p4)/5,
+         movave_dea = (dead+d1+d2+d3+d4)/5) %>%
+  filter(cum_pos > 3) %>%
+  mutate(tag = "all other", obs = row_number()) %>%
+  select(tag, obs, cum_pos, movave_pos)
+graph_county_pos <- bind_rows(graph_county_pos, graph_county_other)
 library(broom)
 xx <- graph_county_pos %>% 
   group_by(tag) %>%
