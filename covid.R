@@ -7,6 +7,14 @@ positive_raw <- read_csv('~/Desktop/wacounty - positive.csv',
 death_raw <- read_csv('~/Desktop/wacounty - deaths.csv',
                       col_types = list(tag = col_character(),
                                        .default = col_double()))
+# overall_raw <- read_csv('~/Desktop/wacounty - overall.csv')
+# ## get overall data
+# tested <- overall_raw %>%
+#   mutate(pop_tested = tested/population) %>%
+#   select(County, population, positive, pop_tested) %>%
+#   filter(pop_tested > 0.01)
+
+
 ## mutate the data
 pos_data <- positive_raw %>%
   pivot_longer(-tag, names_to = "date", values_to = "positive") %>% 
@@ -85,6 +93,7 @@ xx <- graph_county_pos %>%
 legend <- graph_county_pos %>%
   group_by(tag) %>%
   filter(obs == max(obs)) %>%
+  arrange(tag) %>%
   bind_cols(xx) %>%
   mutate(trend = ifelse(between(estimate, -0.1,0.1), "flat", 
                       ifelse(estimate > 0, "rising", "declining"))) %>%
@@ -106,7 +115,7 @@ ggplot(graph_data, aes(x = obs, y = movave_pos)) +
                        Sys.Date(), 
                        "\n data at https://github.com/monkeywithacupcake/covid-19-wa",
                        sep=" ")) +  
-  expand_limits(x = c(0, 80)) +
+  expand_limits(x = c(0, 100)) +
   theme_minimal() + 
   theme(legend.justification=c(1,0), legend.position=c(1,0))  
 ggsave("~/Desktop/covid-19-wa.png")
@@ -126,7 +135,7 @@ ggplot(graph_data, aes(x = obs, y = movave_pos)) +
              Sys.Date(), 
              "\n data at https://github.com/monkeywithacupcake/covid-19-wa",
              sep=" "))+  
-  expand_limits(x = c(0, 80)) +
+  expand_limits(x = c(0, 100)) +
   theme_minimal() + 
   theme(legend.justification=c(1,0), legend.position=c(1,0)) +
   geom_text(data = legend, 
