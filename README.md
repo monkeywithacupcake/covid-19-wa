@@ -32,7 +32,7 @@ There are 35 public health offices for 39 Washington counties. Benton/Franklin, 
  - Lincoln https://www.co.lincoln.wa.us/public-health/
  - Mason http://www.co.mason.wa.us/COVID-19/index.php
  - Okanogan https://www.okanogandem.org/novel-coronavirus19-covid-19
- - Pacific http://pacificcountyhealthdepartment.com/covid-19/
+ - Pacific https://www.pacificcountycovid19.com/news.html
  - Pend Oreille (with Ferry)
  - Pierce https://www.tpchd.org/healthy-people/diseases/covid-19-pierce-county-cases/
  - San Juan https://www.sanjuanco.com/1682/COVID-19-SJC-Case-Count
