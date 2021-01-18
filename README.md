@@ -1,3 +1,16 @@
+
+# COVID Data
+
+## Updated with new R graph for positivity rate over time
+`covid_positivity_graph.R ` contains a `sumAndGraph(place)` function that will download the .csv of data for the place from [covidtracking](covidtracking.com) and create a graph of the cumulative and daily positivity rate compared to the WHO target of 5%.
+
+
+
+###########
+# Previously - and much of code is still:
+
+
+
 # WA Covid 19
 
 Tracking public data for COVID-19 in Washington state
