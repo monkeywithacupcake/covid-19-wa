@@ -79,20 +79,16 @@ createTestPlot <- function(place) {
 }
 
 
-places <- c("national", "washington")
+#places <- c("national", "washington")
 
-places <- c("south-dakota", "nebraska")
+#places <- c("south-dakota", "nebraska")
 
-places <- c("wyoming", "iowa", "montana", "minnesota")
-places <- c("idaho", "georgia", "florida")
-for(i in 1:length(places)) {
-  createPositivityPlot(places[i])
+#for(i in 1:length(places)) {
+#  createPositivityPlot(places[i])
   #createTestPlot(places[i])
-}
+#}
 
-place <- "washington"
-createTestPlot("washington")
-createPositivityPlot("new-hampshire")
-createPositivityPlot("alabama")
+#createPositivityPlot("new-hampshire")
+#createPositivityPlot("alabama")
 
 
